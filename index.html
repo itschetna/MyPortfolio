@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHETNA SINGH</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fbeba8f9e0.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i> 
+            </nav>
+            <div class="header-text">
+                <p>"Aspiring Software Engineer | Front-End Developer | C++ Enthusiast"</p>
+                <h1>Hello, I am <span>Chetna Singh</span>,<br> currently pursuing Btech in Computer Science <br> at Bennett University.</h1>
+            </div>
+        </div>
+    </div>
+
+    <section class="about">
+        <div class="section__container about__container" id="about">
+            <div class="about__image">
+                <img src="images/profile picture.png"about>
+            </div>
+            <div class="about__content">
+                <h2 class="section__title">About <span>Me</span></h2>
+                <h4 class="section__subtitle">---who i am---</h4>
+                <p class="about__details">
+                    As a dedicated scholar and school board topper, I have consistently demonstrated a commitment to academic excellence and a passion for learning. My journey in technology began with mastering Front-End Development, creating engaging and user-friendly web interfaces. I then advanced to C++, strengthening my foundation in software development and problem-solving. <br><br>
+                    Currently, I am deepening my expertise in Data Structures and Algorithms (DSA), which enhances my analytical abilities and equips me to tackle complex computational challenges efficiently. <br><br>
+                    Core Competencies: <br>
+                    - Front-End Development <br>
+                    - C++ <br>
+                    - Data Structures and Algorithms <br><br>
+                    I am passionate about contributing to innovative projects and collaborating with like-minded professionals. My continuous pursuit of knowledge and enthusiasm for technology drive me to stay updated with industry trends and advancements. I am eager to explore new opportunities for personal and professional growth within the tech industry.
+                </p>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-----------projects--------->
+    <div class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="images/portfolio1.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Spotify Clone</h4>
+                    <p>Front-End Development</p>
+                    <a href="https://github.com/itschetna/Spotify-clone" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            
+            <div class="portfolio-box">
+                <img src="images/portfolio2.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Citypulse</h4>
+                    <p>Travel Management System</p>
+                    <a href="https://github.com/itschetna/CityPulse" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="images/portfolio3.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>My Portfolio</h4>
+                    <p>Personal Website</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="contact-text">
+        <h2>Contact <span>Me</span></h2>
+        <h4>Get in Touch</h4>
+        <ul class="contact-list">
+            <li><i class='bx bxs-send'></i> chetnasinghcs05@gmail.com</li>
+            <li><i class='bx bxs-phone'></i> 0123456789</li>
+        </ul>
+        <div class="contact-icons">
+            <a href="https://www.naukri.com/code360/profile/Aytech" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://leetcode.com/u/Aytehc/" target="_blank"><i class='fa fa-code'></i></a>
+            <a href="https://github.com/itschetna" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/chetna-singh-thakur" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="contact-form">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="fefd1611-424c-4977-be9e-103598313471">
+            <input type="text" name="Name" placeholder="Enter Your Name" required>
+            <input type="email" name="Email" placeholder="Enter Your Email" required>
+            <textarea name="Message" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
+            <input type="submit" value="Submit" class="send">
+        </form>
+    </div>
+</section>
+
+<!-- Last Text Section -->
+<div class="last-text">
+    <p>Developed with love by Chetna Singh &copy; 2024</p>
+</div>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent the default form submission
+        
+        // Send form data using Fetch API
+        fetch(this.action, {
+            method: this.method,
+            body: new FormData(this)
+        }).then(response => {
+            if (response.ok) {
+                // Clear the form fields after successful submission
+                this.reset();
+            } else {
+                console.error('Form submission failed:', response.statusText);
+            }
+        }).catch(error => {
+            console.error('Form submission error:', error);
+        });
+    });
+</script>
+
+    
+    
+
+    <script>
+        // Tab functionality
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function openTab(event, tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        // Menu functionality
+     // Menu functionality
+var sidemenu = document.getElementById("sidemenu");
+function openmenu() {
+    sidemenu.classList.add("active");
+}
+function closemenu() {
+    sidemenu.classList.remove("active");
+}
+  
+
+        // Star background
+        function getRandomNumber(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        function createStar() {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.top = `${getRandomNumber(0, 100)}vh`;
+            star.style.left = `${getRandomNumber(0, 100)}vw`;
+            return star;
+        }
+
+        function generateStars(numStars) {
+            const starContainer = document.querySelector('.star-container');
+            for (let i = 0; i < numStars; i++) {
+                const star = createStar();
+                starContainer.appendChild(star);
+            }
+        }
+
+        generateStars(100);
+    </script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    const aboutSection = document.querySelector('.about__container');
+
+    if (aboutSection) {
+        observer.observe(aboutSection);
+    }
+
+    portfolioSection.forEach(box => {
+        observer.observe(box);
+    });
+});
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);  // Optionally, stop observing after animation
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    const contactSection = document.querySelector('.contact');
+    observer.observe(contactSection);
+
+    const formElements = document.querySelectorAll('.contact-form input, .contact-form textarea, .contact-form input[type="submit"]');
+    formElements.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+</script>
+
+</body>
+
+</html>
